@@ -1,1 +1,2 @@
 # DMTFroyoRepository
+I got help for this project during lab hours, I would've been unable to come up with the code I used on my own.  It's largely (the object part) from Katie's code, she did a really good job.  I've put in comments to try and break down what everything does, since it's a bit reductive for me to just use someone else's code and learn nothing from it (not to mention generally bad practice in life).  So I believe I understand how she did it, and I'm going to make my own and add it as an alternative to this file before next class.
