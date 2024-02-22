@@ -12,15 +12,25 @@ console.table(flavors);
 
 //Next step is to create the object and the function to add stuff into it
 //this all works, figure out why it does, what each piece does.  Then figure out how to do it a different way.
-const flavorTable = {};
-for (let i = 0; i < flavors.length; i++) {
-  flavors[i] in flavorTable
-    ? (flavorTable[flavors[i]] += 1)
+const flavorTable = {}; //creates empty object for stuff to get pushed into
+for (
+  let i = 0;
+  i < flavors.length;
+  i++ //creates basic loop that will run through the entirety of the array flavors, that the prompt fills
+) {
+  flavors[i] in flavorTable //tells to put the element from the flavors array which corresponds with the count into flavor table.  Or wait, it may actually be a condition with a truthy value (Ie: running through the whole array checkign to see if each one is in the object, adding one to the index if it is and setting the index at one if it isn't)
+    ? (flavorTable[flavors[i]] += 1) // ternary function, if flavors[i] is in the object already (meeting the condition above by the key of whatever the counter is already on matching a prior key), then it sets the counter one higher.  Figure out if this counter is tied to the value (ie if it's saying vanilla:1 vanilla:1 and then totaling it, or if theres a counter for each one that adds something each time)
     : (flavorTable[flavors[i]] = 1);
 }
+
+//for(parameters for the loop) {conditions}
+
 console.log(flavorTable);
 console.table(flavorTable);
 console.log("user input array", flavors);
 //stores data as strings and
 console.log(userInputString);
 console.table(flavors);
+
+//Alternate plan for doing this
+// Create a similar prompt box, then store it in an array the same way.  See if there is another way to write the function and loop that creates the object and pushes the array values into it.  Maybe an arrow function using the same ternary conditions?  I don't think a while loop would work (maybe set it )
